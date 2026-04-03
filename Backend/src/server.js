@@ -62,13 +62,13 @@ const startServer = async () => {
     console.log("🚀 Starting services...");
 
     // 🔥 Start Kafka Services (PARALLEL = FASTER)
-    await Promise.all([
-      startProducer(),
-      startConsumer(),
-      startAlertConsumer(),
-    ]);
-
-    console.log("✅ Kafka fully running");
+    //await Promise.all([
+    //startProducer(),
+    //startConsumer(),
+    //startAlertConsumer(),
+    //]);
+    console.log("⚠️ Kafka temporarily disabled for Railway deployment");
+    //console.log("✅ Kafka fully running");
 
     // 🚀 Start Server
     const PORT = process.env.PORT || 5000;
